@@ -23,32 +23,68 @@
     {
       "id": 101,
       "title": "Inception",
-      "year": 2010
+      "released": "16 JUL 2010",
+      "img": "/imgs/inception.jpg"
     },
     {
       "id": 202,
       "title": "Interstellar",
-      "year": 2014
+      "released": "7 NOV 2014",
+      "img": "/imgs/interstellar.jpg"
     },
     {
       "id": 303,
       "title": "The Matrix",
-      "year": 1999
+      "released": "31 MAR 1999",
+      "img": "/imgs/matrix.jpg"
     },
     {
       "id": 404,
       "title": "The Dark Knight",
-      "year": 2008
+      "released": "25 JUL 2008",
+      "img": "/imgs/drk_knight.jpg"
     },
     {
       "id": 505,
       "title": "Fight Club",
-      "year": 1999
+      "released": "15 OCT 1999",
+      "img": "/imgs/fight_club.jpg"
     },
     {
       "id": 606,
       "title": "Pulp Fiction",
-      "year": 1994
+      "released": "14 OCT 1994",
+      "img": "/imgs/pulp_fiction.jpg"
+    },
+    {
+      "id": 707,
+      "title": "Mufasa: The Lion King",
+      "released": "26 MAR 2025",
+      "img": "/imgs/mufasa.jpg"
+    },
+    {
+      "id": 808,
+      "title": "Flow",
+      "released": "07 MAR 2025",
+      "img": "/imgs/flow.jpg"
+    },
+    {
+      "id": 809,
+      "title": "Presence",
+      "released": "07 FEB 2025",
+      "img": "/imgs/presence.jpg"
+    },
+    {
+      "id": 909,
+      "title": "The Shawshank Redemption",
+      "released": "23 NOV 1994",
+      "img": "/imgs/shawshank.jpg"
+    },
+    {
+      "id": 1010,
+      "title": "The Codes of War",
+      "released": "20 MAR 1994",
+      "img": "/imgs/codewar.jpg"
     }
   ]
 }
