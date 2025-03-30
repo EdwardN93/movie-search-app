@@ -5,9 +5,9 @@ const itemHover = document.querySelectorAll(".item_hover");
 
 relativeItem.forEach((element) => {
   element.addEventListener("mouseover", (e) => {
-    element.querySelector("ul").classList.remove("hidden");
+    element.querySelector("div").classList.remove("hidden");
   });
   element.addEventListener("mouseout", () => {
-    element.querySelector("ul").classList.add("hidden");
+    element.querySelector("div").classList.add("hidden");
   });
 });
