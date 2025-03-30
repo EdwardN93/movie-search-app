@@ -24,67 +24,78 @@
       "id": 101,
       "title": "Inception",
       "released": "16 JUL 2010",
-      "img": "/imgs/inception.jpg"
+      "img": "/imgs/inception.jpg",
+      "rating": 4.9
     },
     {
       "id": 202,
       "title": "Interstellar",
       "released": "7 NOV 2014",
-      "img": "/imgs/interstellar.jpg"
+      "img": "/imgs/interstellar.jpg",
+      "rating": 4.5
     },
     {
       "id": 303,
       "title": "The Matrix",
       "released": "31 MAR 1999",
-      "img": "/imgs/matrix.jpg"
+      "img": "/imgs/matrix.jpg",
+      "rating": 3.5
     },
     {
       "id": 404,
       "title": "The Dark Knight",
       "released": "25 JUL 2008",
-      "img": "/imgs/drk_knight.jpg"
+      "img": "/imgs/drk_knight.jpg",
+      "rating": 3.4
     },
     {
       "id": 505,
       "title": "Fight Club",
       "released": "15 OCT 1999",
-      "img": "/imgs/fight_club.jpg"
+      "img": "/imgs/fight_club.jpg",
+      "rating": 4.4
     },
     {
       "id": 606,
       "title": "Pulp Fiction",
       "released": "14 OCT 1994",
-      "img": "/imgs/pulp_fiction.jpg"
+      "img": "/imgs/pulp_fiction.jpg",
+      "rating": 2.6
     },
     {
       "id": 707,
       "title": "Mufasa: The Lion King",
       "released": "26 MAR 2025",
-      "img": "/imgs/mufasa.jpg"
+      "img": "/imgs/mufasa.jpg",
+      "rating": 4.9
     },
     {
       "id": 808,
       "title": "Flow",
       "released": "07 MAR 2025",
-      "img": "/imgs/flow.jpg"
+      "img": "/imgs/flow.jpg",
+      "rating": 4.4
     },
     {
       "id": 809,
       "title": "Presence",
       "released": "07 FEB 2025",
-      "img": "/imgs/presence.jpg"
+      "img": "/imgs/presence.jpg",
+      "rating": 3.1
     },
     {
       "id": 909,
       "title": "The Shawshank Redemption",
       "released": "23 NOV 1994",
-      "img": "/imgs/shawshank.jpg"
+      "img": "/imgs/shawshank.jpg",
+      "rating": 4.7
     },
     {
       "id": 1010,
       "title": "The Codes of War",
       "released": "20 MAR 1994",
-      "img": "/imgs/codewar.jpg"
+      "img": "/imgs/codewar.jpg",
+      "rating": 2.8
     }
   ]
 }

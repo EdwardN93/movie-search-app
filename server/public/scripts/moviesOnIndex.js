@@ -23,7 +23,33 @@ async function getMoviesAndDisplay() {
   }
 }
 
+async function getTopRated() {
+  const topRatedList = document.querySelector(".top-rated");
+
+  if (!topRatedList) {
+    console.log("Error: .movies-list not found in DOM");
+  }
+  topRatedList.innerHTML = "<p>Loading movies...</p>";
+
+  try {
+    const url = "http://192.168.1.137:3000/movies?_sort=-rating";
+    const response = await fetch(url);
+    if (!response.ok) throw new Error(`Status: ${response.status}`);
+    const data = await response.json();
+
+    topRatedList.innerHTML = "";
+
+    data.forEach((movie) => {
+      topRatedList.insertAdjacentHTML("beforeend", getMovies(movie));
+    });
+    console.log(data);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 getMoviesAndDisplay();
+getTopRated();
 
 function getMovies(movie) {
   return `
@@ -36,6 +62,7 @@ function getMovies(movie) {
     <div class="movie-info">
         <a href="#">${movie.title}</a>
             <p>${movie.released}</p>
+            <p>Rating: ${movie.rating}</p>
     </div>
 </div>
 `;
