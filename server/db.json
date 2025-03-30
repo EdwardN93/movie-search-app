@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Edward",
+      "password": "hashedPass",
+      "email": "edward.n9343@gmail.com",
+      "favorites": [101, 202],
+      "dislikes": [303, 606],
+      "watchlist": [404]
+    },
+    {
+      "id": 2,
+      "name": "Geanina",
+      "password": "hashedPass",
+      "email": "ionescugeanina123@gmail.com",
+      "favorites": [102, 303],
+      "dislikes": [202, 404],
+      "watchlist": [606]
+    }
+  ],
+  "movies": [
+    {
+      "id": 101,
+      "title": "Inception",
+      "year": 2010
+    },
+    {
+      "id": 202,
+      "title": "Interstellar",
+      "year": 2014
+    },
+    {
+      "id": 303,
+      "title": "The Matrix",
+      "year": 1999
+    },
+    {
+      "id": 404,
+      "title": "The Dark Knight",
+      "year": 2008
+    },
+    {
+      "id": 505,
+      "title": "Fight Club",
+      "year": 1999
+    },
+    {
+      "id": 606,
+      "title": "Pulp Fiction",
+      "year": 1994
+    }
+  ]
+}
