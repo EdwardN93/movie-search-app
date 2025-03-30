@@ -1,11 +1,18 @@
 async function getMoviesAndDisplay() {
   const moviesList = document.querySelector(".movies-list");
 
+  if (!moviesList) {
+    console.log("Error: .movies-list not found in DOM");
+  }
+  moviesList.innerHTML = "<p>Loading movies...</p>";
+
   try {
     const url = "http://192.168.1.137:3000/movies";
     const response = await fetch(url);
     if (!response.ok) throw new Error(`Status: ${response.status}`);
     const data = await response.json();
+
+    moviesList.innerHTML = "";
 
     data.forEach((movie) => {
       moviesList.insertAdjacentHTML("beforeend", getMovies(movie));
