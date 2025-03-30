@@ -3,6 +3,8 @@ console.log("Movies working");
 const relativeItem = document.querySelectorAll(".relative");
 const itemHover = document.querySelectorAll(".item_hover");
 
+const copyText = document.querySelector(".copy-text"); // for footer span
+
 relativeItem.forEach((element) => {
   element.addEventListener("mouseover", (e) => {
     element.querySelector("div").classList.remove("hidden");
@@ -11,3 +13,5 @@ relativeItem.forEach((element) => {
     element.querySelector("div").classList.add("hidden");
   });
 });
+
+copyText.textContent += new Date().getFullYear();

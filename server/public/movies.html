@@ -8,19 +8,66 @@
     <title>Movies list</title>
   </head>
   <body>
-    <h2>Movies List</h2>
-    <header>
-      <div class="navbar-container">
-        <nav id="navbar">
-          <div id="logo-container">
-            <h1>LOGO</h1>
-          </div>
-          <div id="links">
-            <ul class="navbar-list">
-              <li><a href="index.html">Home</a></li>
-            </ul>
-          </div>
-        </nav>
+    <header id="header" class="header">
+      <div class="over-nav">
+        <div class="nav_wrapper">
+          <nav id="navbar" class="navbar">
+            <div id="logo-container" class="logo-container">
+              <h2><a href="index.html">LOGO</a></h2>
+            </div>
+            <div id="links" class="links">
+              <ul class="navbar-list">
+                <li class="relative">
+                  <a href="movies.html">Movies</a>
+                  <div class="item_hover hidden">
+                    <ul>
+                      <li>Popular</li>
+                      <li>Now Playing</li>
+                      <li>Upcoming</li>
+                      <li>Top Rated</li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="relative">
+                  <a href="#">TV Shows</a>
+                  <div class="item_hover hidden">
+                    <ul>
+                      <li>Popular</li>
+                      <li>Now Playing</li>
+                      <li>Upcoming</li>
+                      <li>Top Rated</li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="relative">
+                  <a href="#">Actors</a>
+                  <div class="item_hover hidden">
+                    <ul>
+                      <li>Popular Actors</li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="relative">
+                  <a href="#">More</a>
+                  <div class="item_hover hidden">
+                    <ul>
+                      <li>Discussions</li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <div class="sub_media">
+          <ul class="primary">
+            <li>Sign In</li>
+            <li>Login</li>
+            <li>Join Movies</li>
+            <li>Search</li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -46,5 +93,6 @@
         </ul>
       </section>
     </main>
+    <footer></footer>
   </body>
 </html>
