@@ -3,11 +3,80 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>File Converter</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <script src="../scripts/index.js" defer></script>
+    <title>Movies</title>
   </head>
   <body>
-    <h2>Movie lists</h2>
+    <h2>Movies</h2>
+    <div class="container">
+      <header id="header" class="header">
+        <div class="nav_wrapper">
+          <nav id="navbar" class="navbar">
+            <div id="logo-container">
+              <h1>LOGO</h1>
+            </div>
+            <div id="links" class="links">
+              <ul class="navbar-list">
+                <li class="relative">
+                  <a href="movies.html">Movies</a>
+                  <ul class="item_hover hidden">
+                    <li>Popular</li>
+                    <li>Now Playing</li>
+                    <li>Upcoming</li>
+                    <li>Top Rated</li>
+                  </ul>
+                </li>
+                <li class="relative">
+                  <a href="#">TV Shows</a>
+                  <ul class="item_hover hidden">
+                    <li>Popular</li>
+                    <li>Now Playing</li>
+                    <li>Upcoming</li>
+                    <li>Top Rated</li>
+                  </ul>
+                </li>
+
+                <li class="relative">
+                  <a href="#">Actors</a>
+                  <ul class="item_hover hidden">
+                    <li>Popular Actors</li>
+                  </ul>
+                </li>
+                <li class="relative">
+                  <a href="#">More</a>
+                  <ul class="item_hover hidden">
+                    <li>Discussions</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <div class="sub_media">
+          <ul class="primary">
+            <li>logIn</li>
+            <li>logIn</li>
+            <li>logIn</li>
+            <li>Search</li>
+          </ul>
+        </div>
+      </header>
+
+      <main id="container" class="main-container">
+        <section id="movies-list-section" class="movies-list-section">
+          <ul>
+            <li>movie1</li>
+            <li>movie2</li>
+            <li>movie3</li>
+            <li>movie4</li>
+            <li>movie5</li>
+            <li>movie6</li>
+            <li>movie7</li>
+          </ul>
+        </section>
+      </main>
+      <footer id="footer" class="footer"></footer>
+    </div>
   </body>
 </html>
