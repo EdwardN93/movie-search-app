@@ -220,6 +220,20 @@ li a {
   gap: 5rem;
 }
 
+button {
+  padding: 0.8rem 1rem;
+  background-color: var(--bg-h-f);
+  color: var(--a-font-col);
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--copy-font-col);
+}
+
 @media only screen and (max-width: 600px) {
   .header {
     padding: 1rem 0;

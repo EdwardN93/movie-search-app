@@ -32,7 +32,7 @@ async function getTopRated() {
   topRatedList.innerHTML = "<p>Loading movies...</p>";
 
   try {
-    const url = "http://192.168.1.137:3000/movies?_sort=-rating";
+    const url = "http://192.168.1.137:3000/movies?_sort=rating&_order=desc";
     const response = await fetch(url);
     if (!response.ok) throw new Error(`Status: ${response.status}`);
     const data = await response.json();
