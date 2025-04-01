@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/sign-in.css" />
     <script src="scripts/index.js" defer></script>
-    <script src="scripts/moviesOnIndex.js" defer></script>
-    <script src="scripts/check-links.js" defer></script>
-    <title>Movies</title>
+    <script src="scripts/log-in.js" defer></script>
+
+    <title>Sign In</title>
   </head>
   <body>
     <div class="container">
@@ -65,8 +66,7 @@
           </div>
           <div class="sub_media">
             <ul class="primary">
-              <li id="refSign"><a href="sign-up.html">Sign Up</a></li>
-              <li id="refLog"><a href="log-in.html">Login</a></li>
+              <li><a href="sign-up.html">Sign Up</a></li>
               <li>Join Movies</li>
               <li>Search</li>
             </ul>
@@ -74,26 +74,32 @@
         </div>
       </header>
 
-      <main id="container-pop" class="main-container">
-        <section id="movies-list-section" class="movies-list-section">
-          <div>
-            <h2>What's Popular</h2>
-          </div>
-          <div class="movie-list-container">
-            <div class="movies-list"></div>
-          </div>
-        </section>
-      </main>
+      <main id="sign-form" class="sign-form">
+        <form id="form" class="form">
+          <h2>Log in</h2>
 
-      <main id="container-top-rated" class="main-container">
-        <section id="movies-list-section" class="movies-list-section">
           <div>
-            <h2>Top Rated</h2>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email" />
           </div>
-          <div class="movie-list-container">
-            <div class="movies-list top-rated"></div>
+          <div>
+            <label for="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+            />
           </div>
-        </section>
+          <div>
+            <button id="create-account" class="btn btn-create-account">
+              Log in
+            </button>
+          </div>
+          <h2>
+            Don't have an account? Sign in <a href="sign-up.html">here</a>
+          </h2>
+        </form>
       </main>
 
       <footer id="footer" class="footer">

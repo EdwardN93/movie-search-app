@@ -1,5 +1,6 @@
 async function getMoviesAndDisplay() {
   const moviesList = document.querySelector(".movies-list");
+  const mainContainer = document.querySelectorAll(".main-container");
 
   if (!moviesList) {
     console.log("Error: .movies-list not found in DOM");
@@ -7,17 +8,26 @@ async function getMoviesAndDisplay() {
   moviesList.innerHTML = "<p>Loading movies...</p>";
 
   try {
-    const url = "http://192.168.1.137:3000/movies";
-    const response = await fetch(url);
-    if (!response.ok) throw new Error(`Status: ${response.status}`);
-    const data = await response.json();
+    if (getToken()) {
+      const url = "http://192.168.1.137:3000/movies";
+      const response = await fetch(url);
+      if (!response.ok) throw new Error(`Status: ${response.status}`);
+      const data = await response.json();
 
-    moviesList.innerHTML = "";
+      moviesList.innerHTML = "";
 
-    data.forEach((movie) => {
-      moviesList.insertAdjacentHTML("beforeend", getMovies(movie));
-    });
-    console.log(data);
+      data.forEach((movie) => {
+        moviesList.insertAdjacentHTML("beforeend", getMovies(movie));
+      });
+      console.log(data);
+    } else {
+      mainContainer.forEach((el) => {
+        el.innerHTML = "";
+      });
+      mainContainer.textContent = "Need to log in";
+      document.querySelector("#container-pop").textContent =
+        "Need to log in to show movies";
+    }
   } catch (error) {
     console.log(error);
   }
@@ -28,21 +38,26 @@ async function getTopRated() {
 
   if (!topRatedList) {
     console.log("Error: .movies-list not found in DOM");
+    return;
   }
-  topRatedList.innerHTML = "<p>Loading movies...</p>";
+  // moviesList.innerHTML = "<p>Loading movies...</p>";
 
   try {
-    const url = "http://192.168.1.137:3000/movies?_sort=rating&_order=desc";
-    const response = await fetch(url);
-    if (!response.ok) throw new Error(`Status: ${response.status}`);
-    const data = await response.json();
+    if (getToken()) {
+      const url = "http://192.168.1.137:3000/movies?_sort=rating&_order=desc";
+      const response = await fetch(url);
+      if (!response.ok) throw new Error(`Status: ${response.status}`);
+      const data = await response.json();
 
-    topRatedList.innerHTML = "";
+      topRatedList.innerHTML = "";
 
-    data.forEach((movie) => {
-      topRatedList.insertAdjacentHTML("beforeend", getMovies(movie));
-    });
-    console.log(data);
+      data.forEach((movie) => {
+        topRatedList.insertAdjacentHTML("beforeend", getMovies(movie));
+      });
+      console.log(data);
+    } else {
+      topRatedList.innerHTML = "";
+    }
   } catch (error) {
     console.log(error);
   }
@@ -67,3 +82,9 @@ function getMovies(movie) {
 </div>
 `;
 }
+
+function getToken() {
+  if (localStorage.getItem("token")) return 1;
+  else return 0;
+}
+getToken();

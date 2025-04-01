@@ -5,18 +5,79 @@
       "name": "Edward",
       "password": "hashedPass",
       "email": "edward.n9343@gmail.com",
-      "favorites": [101, 202],
-      "dislikes": [303, 606],
-      "watchlist": [404]
+      "favorites": [
+        101,
+        202
+      ],
+      "dislikes": [
+        303,
+        606
+      ],
+      "watchlist": [
+        404
+      ]
     },
     {
       "id": 2,
       "name": "Geanina",
       "password": "hashedPass",
       "email": "ionescugeanina123@gmail.com",
-      "favorites": [102, 303],
-      "dislikes": [202, 404],
-      "watchlist": [606]
+      "favorites": [
+        102,
+        303
+      ],
+      "dislikes": [
+        202,
+        404
+      ],
+      "watchlist": [
+        606
+      ]
+    },
+    {
+      "email": "edward.n934@gmail.com",
+      "password": "$2a$10$kRmAs81m4K6GLcPqdxqo6OMScrXJ9YqzqxtEB4hfxwoZno/nl2May",
+      "name": "Edwynn666",
+      "favorites": [],
+      "dislikes": [],
+      "watchlist": [],
+      "id": 3
+    },
+    {
+      "email": "edward@gmail.com",
+      "password": "$2a$10$9MbcAJIGNkDN6yqj3N3oDuVvnYzKYpFazAEwoZ6FSqth9TBvO3e9a",
+      "name": "Edward",
+      "favorites": [],
+      "dislikes": [],
+      "watchlist": [],
+      "id": 4
+    },
+    {
+      "email": "gmail@gmail.com",
+      "password": "$2a$10$BD6Q4xxe7DnVbyGtyKwjb.BRzy3jdqVuzSlcHexhh3FaGjbmQcOJe",
+      "name": "edwa",
+      "favorites": [],
+      "dislikes": [],
+      "watchlist": [],
+      "id": 5
+    },
+    {
+      "email": "edw@edw.com",
+      "password": "$2a$10$gmaPKvyKarnjiatC53FbuOE9zj6r9fYqG6j80OT5f7IJ03xt2Utmy",
+      "name": "edward",
+      "favorites": [],
+      "dislikes": [],
+      "watchlist": [],
+      "id": 6
+    },
+    {
+      "email": "edwa@edward.com",
+      "password": "$2a$10$mGrcpCGLfAfbmIytDHC0R.rvVYD.5tsahxX9Ah4SEaw8eGivwsVQe",
+      "name": "Edwynn660",
+      "favorites": [],
+      "dislikes": [],
+      "watchlist": [],
+      "id": 7
     }
   ],
   "movies": [
