@@ -1,0 +1,101 @@
+.my-profile {
+  background-image: url("../imgs/red-b.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: auto;
+  color: white;
+}
+
+h2 a {
+  transition: 0.2s ease-in-out;
+}
+
+h2 a:hover {
+  color: var(--a-col-hov);
+}
+.profile-wrapper {
+  display: flex;
+  background: rgb(58, 7, 12);
+  background: linear-gradient(
+    310deg,
+    rgba(58, 7, 12, 1) 0%,
+    rgba(10, 57, 96, 1) 100%
+  );
+  width: 100%;
+  height: auto;
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4rem;
+  margin: 5rem;
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.circle {
+  background-color: brown;
+  padding: 50px 80px;
+  color: white;
+  border-radius: 50%;
+  font-size: 4rem;
+  cursor: pointer;
+}
+
+.item-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 90vw;
+  border-radius: 10px;
+  margin: 2rem 0;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 0;
+}
+
+.card-image {
+  height: 200px;
+}
+.card-image a img {
+  background-image: url("../imgs/interstellar.jpg");
+  width: 133.33px;
+  height: 200px;
+  border-radius: 10px 0 0 10px;
+  padding: 0;
+}
+
+.details-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.movie-title span {
+  color: gray;
+}
+
+.action-bar ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.action-bar-list li {
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.action-bar-list li:hover {
+  color: gray;
+}

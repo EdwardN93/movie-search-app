@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/sign-in.css" />
+    <link rel="stylesheet" href="styles/account.css" />
     <script src="scripts/index.js" defer></script>
     <script src="scripts/check-links.js" defer></script>
+    <script src="scripts/account.js" defer></script>
 
     <title>My Account</title>
   </head>
@@ -74,7 +76,59 @@
           </div>
         </div>
       </header>
-      <h3>MY ACCOUNT PAGE...</h3>
+
+      <section id="my-profile" class="my-profile">
+        <div class="profile-wrapper">
+          <div id="content" class="content">
+            <div id="profile-header">
+              <span class="circle">E</span>
+            </div>
+            <div id="profile-content" class="profile-content">
+              <h2>EDWARD</h2>
+              <h2>Favorites: 3 movies</h2>
+              <h2>Likes: 6 movies</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="liked-movies" class="liked-movies">
+        <div id="liked-movies-wrapper" class="liked-movies-wrapper">
+          <div id="items-wrapper" class="items-wrapper">
+            <div id="card" class="item-card">
+              <div class="card-image">
+                <a href="#">
+                  <img src="imgs/interstellar.jpg" alt="img" />
+                </a>
+              </div>
+              <div class="card-details">
+                <div class="details-wrapper">
+                  <div class="movie-title">
+                    <h2><a href="#">Movie Name</a></h2>
+                    <span>21 oct 2020</span>
+                  </div>
+                  <div class="movie-description">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Architecto placeat itaque quibusdam nisi dolorum obcaecati
+                      dignissimos? Assumenda, saepe vero? Nulla provident, in
+                      voluptas at harum sed maxime tempora accusantium quasi.
+                    </p>
+                  </div>
+                  <div class="action-bar">
+                    <ul class="action-bar-list">
+                      <li>Favorite</li>
+                      <li>Watchlist</li>
+                      <li>Remove</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <footer id="footer" class="footer">
         <nav class="footer-nav">
           <div class="basics">
