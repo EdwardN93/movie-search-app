@@ -23,7 +23,13 @@ async function fetchUserDetails() {
       (curUser) => curUser.email === loggedInUser.email
     );
     user.forEach((element) => {
-      console.log(element);
+      const userNameDisplay = document.querySelector(".profile-name");
+      const favoriteMovies = document.querySelector(".favorites");
+
+      if (element.favorites.length < 1)
+        favoriteMovies.textContent = "No favorites to show";
+
+      userNameDisplay.textContent = element.name;
     });
   }
 }

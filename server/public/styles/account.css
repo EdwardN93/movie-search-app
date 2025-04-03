@@ -8,11 +8,7 @@
   color: white;
 }
 
-h2 a {
-  transition: 0.2s ease-in-out;
-}
-
-h2 a:hover {
+.movie-title h2 a:hover {
   color: var(--a-col-hov);
 }
 .profile-wrapper {
