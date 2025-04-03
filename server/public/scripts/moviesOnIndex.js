@@ -9,8 +9,16 @@ async function getMoviesAndDisplay() {
 
   try {
     if (getToken()) {
+      const options = {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${getToken()}`,
+        },
+      };
+
       const url = "http://192.168.1.137:3000/movies";
-      const response = await fetch(url);
+      const response = await fetch(url, options);
       if (!response.ok) throw new Error(`Status: ${response.status}`);
       const data = await response.json();
 
@@ -44,8 +52,16 @@ async function getTopRated() {
 
   try {
     if (getToken()) {
+      const options = {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${getToken()}`,
+        },
+      };
+
       const url = "http://192.168.1.137:3000/movies?_sort=rating&_order=desc";
-      const response = await fetch(url);
+      const response = await fetch(url, options);
       if (!response.ok) throw new Error(`Status: ${response.status}`);
       const data = await response.json();
 
@@ -84,7 +100,8 @@ function getMovies(movie) {
 }
 
 function getToken() {
-  if (localStorage.getItem("token")) return 1;
+  const token = localStorage.getItem("token");
+  if (token) return JSON.parse(token);
   else return 0;
 }
 getToken();

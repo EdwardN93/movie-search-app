@@ -74,10 +74,23 @@
       "email": "edwa@edward.com",
       "password": "$2a$10$mGrcpCGLfAfbmIytDHC0R.rvVYD.5tsahxX9Ah4SEaw8eGivwsVQe",
       "name": "Edwynn660",
-      "favorites": [],
+      "favorites": [
+        505,
+        606,
+        707
+      ],
       "dislikes": [],
       "watchlist": [],
       "id": 7
+    },
+    {
+      "email": "pomodoro@pomo.com",
+      "password": "$2a$10$KtVxMaEFxLpeY4sXlRM2ieUgs4NgH0owksb.3G1W3ryPmkdeLL6ze",
+      "name": "PomoDoRo",
+      "favorites": [],
+      "dislikes": [],
+      "watchlist": [],
+      "id": 8
     }
   ],
   "movies": [
