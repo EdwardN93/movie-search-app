@@ -99,77 +99,88 @@
       "title": "Inception",
       "released": "16 JUL 2010",
       "img": "/imgs/inception.jpg",
-      "rating": 4.9
+      "rating": 4.9,
+      "overview": "Cobb, a skilled thief who commits corporate espionage by infiltrating the subconscious of his targets is offered a chance to regain his old life as payment for a task considered to be impossible: \"inception\", the implantation of another person's idea into a target's subconscious."
     },
     {
       "id": 202,
       "title": "Interstellar",
       "released": "7 NOV 2014",
       "img": "/imgs/interstellar.jpg",
-      "rating": 4.5
+      "rating": 4.5,
+      "overview": "The adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage."
     },
     {
       "id": 303,
       "title": "The Matrix",
       "released": "31 MAR 1999",
       "img": "/imgs/matrix.jpg",
-      "rating": 3.5
+      "rating": 3.5,
+      "overview": "Set in the 22nd century, The Matrix tells the story of a computer hacker who joins a group of underground insurgents fighting the vast and powerful computers who now rule the earth."
     },
     {
       "id": 404,
       "title": "The Dark Knight",
       "released": "25 JUL 2008",
       "img": "/imgs/drk_knight.jpg",
-      "rating": 3.4
+      "rating": 3.4,
+      "overview": "Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as the Joker."
     },
     {
       "id": 505,
       "title": "Fight Club",
       "released": "15 OCT 1999",
       "img": "/imgs/fight_club.jpg",
-      "rating": 4.4
+      "rating": 4.4,
+      "overview": "A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground \"fight clubs\" forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion."
     },
     {
       "id": 606,
       "title": "Pulp Fiction",
       "released": "14 OCT 1994",
       "img": "/imgs/pulp_fiction.jpg",
-      "rating": 2.6
+      "rating": 2.6,
+      "overview": "A burger-loving hit man, his philosophical partner, a drug-addled gangster's moll and a washed-up boxer converge in this sprawling, comedic crime caper. Their adventures unfurl in three stories that ingeniously trip back and forth in time."
     },
     {
       "id": 707,
       "title": "Mufasa: The Lion King",
       "released": "26 MAR 2025",
       "img": "/imgs/mufasa.jpg",
-      "rating": 4.9
+      "rating": 4.9,
+      "overview": "Mufasa, a cub lost and alone, meets a sympathetic lion named Taka, the heir to a royal bloodline. The chance meeting sets in motion an expansive journey of a group of misfits searching for their destiny."
     },
     {
       "id": 808,
       "title": "Flow",
       "released": "07 MAR 2025",
       "img": "/imgs/flow.jpg",
-      "rating": 4.4
+      "rating": 4.4,
+      "overview": "A solitary cat, displaced by a great flood, finds refuge on a boat with various species and must navigate the challenges of adapting to a transformed world together."
     },
     {
       "id": 809,
       "title": "Presence",
       "released": "07 FEB 2025",
       "img": "/imgs/presence.jpg",
-      "rating": 3.1
+      "rating": 3.1,
+      "overview": "A couple, Rebekah and Chris, and their children, Tyler and Chloe, move into a seemingly normal suburban home. When strange occurrences occur, they begin to believe that there is something else in the house with them. The presence is about to disrupt their lives in unimaginable ways."
     },
     {
       "id": 909,
       "title": "The Shawshank Redemption",
       "released": "23 NOV 1994",
       "img": "/imgs/shawshank.jpg",
-      "rating": 4.7
+      "rating": 4.7,
+      "overview": "Imprisoned in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope."
     },
     {
       "id": 1010,
       "title": "The Codes of War",
       "released": "20 MAR 1994",
       "img": "/imgs/codewar.jpg",
-      "rating": 2.8
+      "rating": 2.8,
+      "overview": "War stories about family, ethics and honor include the true story of two U.S. Marines who in a span of six seconds, must stand their ground to stop a suicide truck bomb, a Navy Corpsman who attempts to hold on to his humanity, and a WW2 soldier who gets separated from his squad and is forced to re-evaluate his code."
     }
   ]
 }
