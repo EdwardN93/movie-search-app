@@ -14,4 +14,8 @@ relativeItem.forEach((element) => {
   });
 });
 
+document.querySelector(".hamburger").addEventListener("click", function () {
+  document.querySelector(".navbar-list").classList.toggle("show");
+});
+
 copyText.textContent += new Date().getFullYear();

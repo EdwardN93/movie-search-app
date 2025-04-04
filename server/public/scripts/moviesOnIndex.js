@@ -86,7 +86,7 @@ function getMovies(movie) {
   return `
 <div class="movie-card">
     <div>
-        <a href="#">
+        <a href="movie.html?id=${movie.id}">
             <img src="${movie.img}" alt="${movie.title}" />
         </a>
     </div>

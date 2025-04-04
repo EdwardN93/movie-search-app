@@ -75,8 +75,6 @@
       "password": "$2a$10$mGrcpCGLfAfbmIytDHC0R.rvVYD.5tsahxX9Ah4SEaw8eGivwsVQe",
       "name": "Edwynn660",
       "favorites": [
-        505,
-        606,
         707
       ],
       "dislikes": [],
@@ -91,6 +89,19 @@
       "dislikes": [],
       "watchlist": [],
       "id": 8
+    },
+    {
+      "email": "fulgutsa@fulga.com",
+      "password": "$2a$10$HtB/EPy6i9yMLDipR2xemeWMlNfQ3RPN75lS5W5JUl2JYMd52kGVa",
+      "name": "Fulgutsa",
+      "favorites": [
+        101,
+        505,
+        707
+      ],
+      "dislikes": [],
+      "watchlist": [],
+      "id": 9
     }
   ],
   "movies": [
