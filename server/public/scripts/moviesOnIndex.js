@@ -91,7 +91,7 @@ function getMovies(movie) {
         </a>
     </div>
     <div class="movie-info">
-        <a href="#">${movie.title}</a>
+        <a href="movie.html?id=${movie.id}">${movie.title}</a>
             <p>${movie.released}</p>
             <p>Rating: ${movie.rating}</p>
     </div>
