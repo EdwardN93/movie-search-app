@@ -75,12 +75,16 @@
       "password": "$2a$10$mGrcpCGLfAfbmIytDHC0R.rvVYD.5tsahxX9Ah4SEaw8eGivwsVQe",
       "name": "Edwynn660",
       "favorites": [
-        707,
-        303,
-        809
+        101
       ],
       "dislikes": [],
-      "watchlist": [],
+      "watchlist": [
+        null,
+        303,
+        707,
+        809,
+        101
+      ],
       "id": 7
     },
     {
