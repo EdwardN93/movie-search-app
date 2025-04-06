@@ -82,51 +82,134 @@ function displayUserInfo() {
   }`;
 }
 
-function displayFavoriteMovies() {
-  const itemsWrapper = document.querySelector(".items-wrapper");
-  itemsWrapper.innerHTML = ""; // clear existing
+function createMovieCard(movie, isFavorite = false) {
+  return `
+    <div id="card-${movie.id}" class="item-card">
+      <div class="card-image">
+        <a href="movie.html?id=${movie.id}">
+          <img src="${movie.img}" alt="img" />
+        </a>
+      </div>
+      <div class="card-details">
+        <div class="details-wrapper">
+          <div class="movie-title">
+            <h2><a href="movie.html?id=${movie.id}">${movie.title}</a></h2>
+            <span>${movie.released}</span>
+          </div>
+          <div class="movie-description">
+            <p>${movie.overview}</p>
+          </div>
+          <div class="action-bar">
+            <ul class="action-bar-list">
+              ${
+                isFavorite
+                  ? `<li class="add-to-watchlist" data-id="${movie.id}">Watchlist</li>
+                     <li class="remove-from-favorites" data-id="${movie.id}">Remove</li>`
+                  : `<li class="remove-from-watchlist" data-id="${movie.id}">Remove</li>`
+              }
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>`;
+}
 
-  const favoriteMovies = allMovies.filter((movie) =>
+function displayFavoriteMovies() {
+  const favoritesWrapper = document.querySelector(".favorites-section");
+  favoritesWrapper.innerHTML = "";
+
+  const favorites = allMovies.filter((movie) =>
     currentUser.favorites.includes(movie.id)
   );
 
-  favoriteMovies.forEach((movie) => {
-    const htmlTemplate = `
-      <div id="card-${movie.id}" class="item-card">
-        <div class="card-image">
-          <a href="movie.html?id=${movie.id}">
-            <img src="${movie.img}" alt="img" />
-          </a>
-        </div>
-        <div class="card-details">
-          <div class="details-wrapper">
-            <div class="movie-title">
-              <h2><a href="movie.html?id=${movie.id}">${movie.title}</a></h2>
-              <span>${movie.released}</span>
-            </div>
-            <div class="movie-description">
-              <p>${movie.overview}</p>
-            </div>
-            <div class="action-bar">
-              <ul class="action-bar-list">
-                <li class="add-to-watchlist" data-id="${movie.id}">Watchlist</li>
-                <li class="remove-from-favorites" data-id="${movie.id}">Remove</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>`;
-    itemsWrapper.insertAdjacentHTML("beforeend", htmlTemplate);
+  if (favorites.length === 0) {
+    favoritesWrapper.textContent = "No movies favorited";
+    return;
+  }
+
+  favorites.forEach((movie) => {
+    const card = createMovieCard(movie, true);
+    favoritesWrapper.insertAdjacentHTML("beforeend", card);
   });
+
+  attachEventListeners(); // Attach again since DOM was reset
 }
 
-// ------------------- Events -------------------
+function displayWatchlist() {
+  const watchlistWrapper = document.querySelector(".watchlist-section");
+  watchlistWrapper.innerHTML = "";
+
+  const watchlistMovies = allMovies.filter((movie) =>
+    currentUser.watchlist.includes(movie.id)
+  );
+
+  if (watchlistMovies.length === 0) {
+    watchlistWrapper.textContent = "No movies in watchlist";
+    return;
+  }
+
+  watchlistMovies.forEach((movie) => {
+    const card = createMovieCard(movie, false);
+    watchlistWrapper.insertAdjacentHTML("beforeend", card);
+  });
+
+  attachEventListeners(); // Attach again since DOM was reset
+}
+
+// ------------------- Toggle Display -------------------
+
+function showFavoritesOnly() {
+  const movieInfoText = document.querySelector(".movie-list-info");
+  document.querySelector(".favorites-section").style.display = "block";
+  document.querySelector(".watchlist-section").style.display = "none";
+  document.querySelector(".movie-list-type").textContent = "Favorite Movies";
+  movieInfoText.style.display = "block";
+  displayFavoriteMovies();
+}
+
+function showWatchlistOnly() {
+  const movieInfoText = document.querySelector(".movie-list-info");
+
+  document.querySelector(".favorites-section").style.display = "none";
+  document.querySelector(".watchlist-section").style.display = "block";
+  document.querySelector(".movie-list-info").style.display = "block";
+  document.querySelector(".movie-list-type").textContent = "Watchlist";
+  movieInfoText.style.display = "block";
+  displayWatchlist();
+}
+
+const allInfoBtn = document.querySelectorAll(".btn-info");
+console.log(allInfoBtn);
+allInfoBtn.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    allInfoBtn.forEach((sBtn) => {
+      sBtn.classList.remove("btn-bg-col");
+    });
+    e.target.classList.add("btn-bg-col");
+  });
+});
+
+document
+  .querySelector(".display-favorites")
+  .addEventListener("click", showFavoritesOnly);
+document
+  .querySelector(".display-watchlist")
+  .addEventListener("click", showWatchlistOnly);
+
+// ------------------- Event Listeners -------------------
 
 function attachEventListeners() {
   document.querySelectorAll(".remove-from-favorites").forEach((btn) => {
     btn.addEventListener("click", async (e) => {
       const movieId = Number(e.target.dataset.id);
       await removeFromFavorites(movieId);
+    });
+  });
+
+  document.querySelectorAll(".remove-from-watchlist").forEach((btn) => {
+    btn.addEventListener("click", async (e) => {
+      const movieId = Number(e.target.dataset.id);
+      await removeFromWatchlist(movieId);
     });
   });
 
@@ -146,11 +229,23 @@ async function removeFromFavorites(movieId) {
       (id) => id !== movieId
     );
     await patchUserData({ favorites: updatedFavorites });
-
-    document.getElementById(`card-${movieId}`)?.remove();
     displayUserInfo();
+    displayFavoriteMovies();
   } catch (err) {
     console.error("Error removing favorite:", err);
+  }
+}
+
+async function removeFromWatchlist(movieId) {
+  try {
+    const updatedWatchlist = currentUser.watchlist.filter(
+      (id) => id !== movieId
+    );
+    await patchUserData({ watchlist: updatedWatchlist });
+    displayUserInfo();
+    displayWatchlist();
+  } catch (err) {
+    console.error("Error removing from watchlist:", err);
   }
 }
 
@@ -163,7 +258,6 @@ async function addToWatchList(movieId) {
 
     const updatedWatchlist = [...currentUser.watchlist, movieId];
     await patchUserData({ watchlist: updatedWatchlist });
-
     alert("Added to watchlist!");
     displayUserInfo();
   } catch (err) {

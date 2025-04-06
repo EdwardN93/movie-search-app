@@ -1,8 +1,12 @@
 :root {
-  --bg-h-f: rgb(3, 37, 65); /* BG for Header - Footer */
+  color-scheme: light dark;
+  --bg-h-f: light-dark(rgb(3, 37, 65), #030637); /* BG for Header - Footer */
   --copy-font-col: rgb(14, 52, 81);
   --a-font-col: #dee2e6;
   --a-col-hov: rgb(1, 180, 228);
+  --font-card: light-dark(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.5));
+  --a-font-card: light-dark(#333, #9290c3);
+  --box-shadow-card: light-dark(rgba(99, 99, 99, 0.2), rgb(119, 8, 8));
 }
 
 * {
@@ -167,7 +171,7 @@ li a {
 .movie-card {
   display: flex;
   flex-direction: column;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: 0px 2px 8px 0px var(--box-shadow-card);
   min-height: 320px;
   border-radius: 10px;
 }
@@ -184,12 +188,12 @@ li a {
 
 .movie-info p {
   font-size: 0.8rem;
-  color: rgba(0, 0, 0, 0.5);
+  color: var(--font-card);
 }
 
 .movie-info a {
   text-decoration: none;
-  color: #333;
+  color: var(--a-font-card);
   font-weight: bold;
 }
 .movie-info a:hover {
@@ -234,9 +238,9 @@ button {
   transition: 0.3s ease-in-out;
 }
 
-button:hover {
+/* button:hover {
   background-color: var(--copy-font-col);
-}
+} */
 
 .hamburger {
   display: none;
