@@ -33,6 +33,11 @@ function getFormData(e) {
   //   console.log(JSON.stringify(formdataJSON));
   signIn(formdataJSON);
   form.reset();
+  alert("Account created successfully!\n\nYou will be redirected to home page");
+  const timeout = setTimeout(() => {
+    window.location.href = `http://192.168.1.137:3000/index.html`;
+    clearInterval(timeout);
+  }, 2000);
 }
 
 function addToken(token) {

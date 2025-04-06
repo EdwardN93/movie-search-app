@@ -76,7 +76,8 @@
       "name": "Edwynn660",
       "favorites": [
         707,
-        202
+        303,
+        809
       ],
       "dislikes": [],
       "watchlist": [],
@@ -103,6 +104,15 @@
       "dislikes": [],
       "watchlist": [],
       "id": 9
+    },
+    {
+      "email": "tasta@tasta.com",
+      "password": "$2a$10$pcmwoIIr7V/NI2E0E5bg4OUScc7S/Z7t7tR1WwH7SX/hBxzgmcTg6",
+      "name": "Tastatura",
+      "favorites": [],
+      "dislikes": [],
+      "watchlist": [],
+      "id": 10
     }
   ],
   "movies": [

@@ -48,7 +48,6 @@ async function getTopRated() {
     console.log("Error: .movies-list not found in DOM");
     return;
   }
-  // moviesList.innerHTML = "<p>Loading movies...</p>";
 
   try {
     if (getToken()) {
