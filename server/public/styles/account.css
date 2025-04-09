@@ -146,7 +146,7 @@
   background-color: var(--a-col-hov);
 }
 
-/* Fixes for mobile screens */
+
 @media (max-width: 768px) {
   .items-wrapper {
     gap: 2rem;

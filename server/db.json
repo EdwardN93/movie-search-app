@@ -79,7 +79,8 @@
         808,
         202,
         606,
-        404
+        404,
+        707
       ],
       "dislikes": [],
       "watchlist": [
@@ -127,6 +128,15 @@
       "dislikes": [],
       "watchlist": [],
       "id": 10
+    },
+    {
+      "email": "ionut@email.com",
+      "password": "$2a$10$1T.TtGL5FvEsx.HUgb2q4.8AaIw128S/.WTkuGH/alaW5azm3j0Om",
+      "name": "Ionut",
+      "favorites": [],
+      "dislikes": [],
+      "watchlist": [],
+      "id": 11
     }
   ],
   "movies": [

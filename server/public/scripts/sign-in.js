@@ -14,6 +14,7 @@ async function signIn(formData) {
         watchlist: [],
       }),
     };
+
     console.log(options);
     const res = await fetch(`${url}/register`, options);
     if (!res.ok) throw new Error(`Error: ${res.status}`);
@@ -30,7 +31,6 @@ function getFormData(e) {
   e.preventDefault();
   const formData = new FormData(form);
   const formdataJSON = Object.fromEntries(formData.entries());
-  //   console.log(JSON.stringify(formdataJSON));
   signIn(formdataJSON);
   form.reset();
   alert("Account created successfully!\n\nYou will be redirected to home page");
