@@ -1,44 +1,52 @@
-const footer = document.querySelector(".footer");
-function footerTemplate() {
-  const div = `<nav class="footer-nav">
-          <div class="basics">
-            <h3>THE BASICS</h3>
-            <ul>
-              <li><a href="#">About Movis</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Support</a></li>
-              <li><a href="#">Status</a></li>
-            </ul>
-          </div>
-          <div class="involved">
-            <h3>GET INVOLVED</h3>
-            <ul>
-              <li><a href="#">Contribution</a></li>
-              <li><a href="#">Add New Movie</a></li>
-              <li><a href="#">Add New Tv Show</a></li>
-            </ul>
-          </div>
-          <div class="community">
-            <h3>COMMUNITY</h3>
-            <ul>
-              <li><a href="#">Guidelines</a></li>
-              <li><a href="#">Discussion</a></li>
-            </ul>
-          </div>
-          <div class="legal">
-            <h3>LEGAL</h3>
-            <ul>
-              <li><a href="#">Term of Use</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </ul>
-          </div>
-        </nav>
-        <div class="copy">
-          <span class="copy-text">&copy;Edwart </span>
-          <span class="copy-text"> - Powered by TMDB - </span>
-        </div>`;
+function renderFooter() {
+  const footer = document.querySelector(".footer");
+  if (!footer) return;
 
-  footer.insertAdjacentHTML("beforeend", div);
+  const sections = [
+    {
+      title: "THE BASICS",
+      items: ["About Movis", "Contact Us", "Support", "Status"],
+    },
+    {
+      title: "GET INVOLVED",
+      items: ["Contribution", "Add New Movie", "Add New Tv Show"],
+    },
+    {
+      title: "COMMUNITY",
+      items: ["Guidelines", "Discussion"],
+    },
+    {
+      title: "LEGAL",
+      items: ["Term of Use", "Privacy Policy"],
+    },
+  ];
+
+  const footerNav = sections
+    .map((section) => createFooterSection(section.title, section.items))
+    .join("");
+
+  const template = `
+    <nav class="footer-nav">
+      ${footerNav}
+    </nav>
+    <div class="copy">
+      <span class="copy-text">&copy;Edwart</span>
+      <span class="copy-text"> - Powered by TMDB - </span>
+    </div>
+  `;
+
+  footer.insertAdjacentHTML("beforeend", template);
 }
 
-footerTemplate();
+function createFooterSection(title, links) {
+  return `
+    <div class="${title.toLowerCase().replace(/\s+/g, "-")}">
+      <h3>${title}</h3>
+      <ul>
+        ${links.map((link) => `<li><a href="#">${link}</a></li>`).join("")}
+      </ul>
+    </div>
+  `;
+}
+
+renderFooter();
