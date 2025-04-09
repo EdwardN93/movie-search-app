@@ -27,7 +27,6 @@ async function getMoviesAndDisplay() {
       data.forEach((movie) => {
         moviesList.insertAdjacentHTML("beforeend", getMovies(movie));
       });
-      console.log(data);
     } else {
       mainContainer.forEach((el) => {
         el.innerHTML = "";
@@ -69,7 +68,6 @@ async function getTopRated() {
       data.forEach((movie) => {
         topRatedList.insertAdjacentHTML("beforeend", getMovies(movie));
       });
-      console.log(data);
     } else {
       topRatedList.innerHTML = "";
     }
@@ -104,14 +102,3 @@ function getToken() {
   else return 0;
 }
 getToken();
-
-const object = {
-  name: "unu",
-  numar: 2,
-  mancare: "fasole",
-  varsta: 22,
-};
-
-const object2 = { ...object };
-
-console.log(object2);

@@ -1,9 +1,7 @@
-console.log("Movies working");
-
 const relativeItem = document.querySelectorAll(".relative");
 const itemHover = document.querySelectorAll(".item_hover");
 
-const copyText = document.querySelector(".copy-text"); // for footer span
+const copyText = document.querySelector(".copy-text");
 
 relativeItem.forEach((element) => {
   element.addEventListener("mouseover", (e) => {

@@ -179,7 +179,7 @@ function showWatchlistOnly() {
 }
 
 const allInfoBtn = document.querySelectorAll(".btn-info");
-console.log(allInfoBtn);
+
 allInfoBtn.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     allInfoBtn.forEach((sBtn) => {
