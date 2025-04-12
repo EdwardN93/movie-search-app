@@ -2,6 +2,8 @@ const params = new URLSearchParams(window.location.search);
 const movieId = params.get("id");
 
 const btnAddToFavorites = document.querySelector(".btn-add-to-favorites");
+const btnAddToWatchlist = document.querySelector(".btn-add-to-watchlist");
+const btnAddToDislikes = document.querySelector(".btn-add-to-dislikes");
 
 async function fetchMovieDetails() {
   try {
@@ -77,6 +79,45 @@ async function addToFavorites() {
   }
 }
 
+async function addToWatchlist() {
+  const token = getToken();
+  if (!token) return;
+
+  const loggedInUser = getLoggedInUser();
+  if (!loggedInUser) return;
+
+  const userId = loggedInUser.sub;
+
+  const userRes = await fetch(`http://192.168.1.137:3000/users/${userId}`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  });
+
+  if (!userRes.ok) throw new Error("Failed to fetch user");
+
+  const user = await userRes.json();
+
+  if (!user.watchlist.includes(Number(movieId))) {
+    user.watchlist.push(Number(movieId));
+
+    await fetch(`http://192.168.1.137:3000/users/${userId}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({ watchlist: user.watchlist }),
+    });
+
+    alert("Added to Watchlist!");
+  } else {
+    alert("Already in Watchlist.");
+  }
+}
+
 function getLoggedInUser() {
   const token = localStorage.getItem("token");
   if (!token) return null;
@@ -86,3 +127,4 @@ function getLoggedInUser() {
 }
 
 btnAddToFavorites.addEventListener("click", addToFavorites);
+btnAddToWatchlist.addEventListener("click", addToWatchlist);
