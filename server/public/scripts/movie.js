@@ -3,7 +3,7 @@ const movieId = params.get("id");
 
 const btnAddToFavorites = document.querySelector(".btn-add-to-favorites");
 const btnAddToWatchlist = document.querySelector(".btn-add-to-watchlist");
-const btnAddToDislikes = document.querySelector(".btn-add-to-dislikes");
+// const btnAddToDislikes = document.querySelector();
 
 async function fetchMovieDetails() {
   try {
@@ -109,7 +109,7 @@ async function addToWatchlist() {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
-      body: JSON.stringify({ watchlist: user.watchlist }),
+      body: JSON.stringify({ watchlist: user.favorites }),
     });
 
     alert("Added to Watchlist!");

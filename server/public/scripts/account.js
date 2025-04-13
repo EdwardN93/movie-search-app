@@ -132,7 +132,7 @@ function displayFavoriteMovies() {
     favoritesWrapper.insertAdjacentHTML("beforeend", card);
   });
 
-  attachEventListeners(); // Attach again since DOM was reset
+  attachEventListeners();
 }
 
 function displayWatchlist() {

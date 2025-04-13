@@ -3,22 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/account.css" />
     <script src="scripts/header.js" defer></script>
     <script src="scripts/footer.js" defer></script>
     <script src="scripts/index.js" defer></script>
     <script src="scripts/check-links.js" defer></script>
+    <script src="scripts/all-movies.js" defer></script>
     <title>Movies list</title>
   </head>
   <body>
-    <header id="header" class="header"><!--navbar--></header>
-    <main>
-      <section id="movies-list-section">
-        <ul id="movies-list">
-          <li></li>
-        </ul>
-      </section>
-    </main>
-    <footer id="footer" class="footer"><!--footer--></footer>
+    <div class="container">
+      <header id="header" class="header"><!--navbar--></header>
+      <main>
+        <section id="movies-list-section">
+          <div id="all-movies"></div>
+        </section>
+      </main>
+      <footer id="footer" class="footer"><!--footer--></footer>
+    </div>
   </body>
 </html>
