@@ -63,10 +63,5 @@ async function appendMovies() {
   });
 }
 
-function getToken() {
-  const token = localStorage.getItem("token");
-  if (token) return JSON.parse(token);
-  else return 0;
-}
 getToken();
 appendMovies();
