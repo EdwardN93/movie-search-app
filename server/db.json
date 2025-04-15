@@ -5,34 +5,18 @@
       "name": "Edward",
       "password": "hashedPass",
       "email": "edward.n9343@gmail.com",
-      "favorites": [
-        101,
-        202
-      ],
-      "dislikes": [
-        303,
-        606
-      ],
-      "watchlist": [
-        404
-      ]
+      "favorites": [101, 202],
+      "dislikes": [303, 606],
+      "watchlist": [404]
     },
     {
       "id": 2,
       "name": "Geanina",
       "password": "hashedPass",
       "email": "ionescugeanina123@gmail.com",
-      "favorites": [
-        102,
-        303
-      ],
-      "dislikes": [
-        202,
-        404
-      ],
-      "watchlist": [
-        606
-      ]
+      "favorites": [102, 303],
+      "dislikes": [202, 404],
+      "watchlist": [606]
     },
     {
       "email": "edward.n934@gmail.com",
@@ -74,57 +58,29 @@
       "email": "edwa@edward.com",
       "password": "$2a$10$mGrcpCGLfAfbmIytDHC0R.rvVYD.5tsahxX9Ah4SEaw8eGivwsVQe",
       "name": "Edwynn660",
-      "favorites": [
-        303,
-        808,
-        202,
-        606,
-        404,
-        707,
-        505
-      ],
+      "accType": "admin",
+      "favorites": [303, 808, 202, 606, 404, 707, 505],
       "dislikes": [],
-      "watchlist": [
-        303,
-        808,
-        202,
-        606,
-        404,
-        707,
-        505,
-        101
-      ],
+      "watchlist": [303, 808, 202, 606, 404, 707, 505, 101],
       "id": 7
     },
     {
       "email": "pomodoro@pomo.com",
       "password": "$2a$10$KtVxMaEFxLpeY4sXlRM2ieUgs4NgH0owksb.3G1W3ryPmkdeLL6ze",
       "name": "PomoDoRo",
-      "favorites": [
-        707,
-        808,
-        303,
-        1010
-      ],
+      "accType": "user",
+      "favorites": [707, 808, 303, 1010],
       "dislikes": [],
-      "watchlist": [
-        707,
-        303
-      ],
+      "watchlist": [707, 303],
       "id": 8
     },
     {
       "email": "fulgutsa@fulga.com",
       "password": "$2a$10$HtB/EPy6i9yMLDipR2xemeWMlNfQ3RPN75lS5W5JUl2JYMd52kGVa",
       "name": "Fulgutsa",
-      "favorites": [
-        505,
-        707
-      ],
+      "favorites": [505, 707],
       "dislikes": [],
-      "watchlist": [
-        505
-      ],
+      "watchlist": [505],
       "id": 9
     },
     {
