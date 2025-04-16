@@ -7,16 +7,16 @@ function renderHeader() {
       <div class="nav_wrapper">
         <nav id="navbar" class="navbar">
           <div id="logo-container" class="logo-container">
-            <h2><a href="index.html">LOGO</a></h2>
+            <h2><a href="index.html">MIVIE</a></h2>
           </div>
           <button class="hamburger">☰</button>
           <div id="links" class="links">
             <ul class="navbar-list">
               ${createNavItem("Movies", [
                 `<a href="all-movies.html">Popular</a>`,
-                "Now Playing",
-                "Upcoming",
-                "Top Rated",
+                // "Now Playing",
+                // "Upcoming",
+                // "Top Rated",
               ])}
               ${createNavItem("TV Shows", [
                 "Popular",

@@ -62,7 +62,7 @@ const showAccountPageAndAdminPage = (user = "user") => {
     if (user === "admin") {
       const liAdminPage = document.createElement("li");
       const adminPage = document.createElement("a");
-      adminPage.href = "#"; // `http://192.168.1.137:3000/admin.html`;
+      adminPage.href = "#"; //`http://192.168.1.137:3000/admin.html`;
       adminPage.textContent = `Admin Settings`;
       liAdminPage.append(adminPage);
       subMediaPrimary.append(liAdminPage);
